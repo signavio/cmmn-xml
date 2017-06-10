@@ -1,0 +1,32 @@
+apply plugin: 'java'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+
+	compile files('libs/diagram-core-1.0-SNAPSHOT.jar')
+	compile files('libs/diagram-1.0-SNAPSHOT.jar')
+	compile files('libs/utils-1.0.2-SNAPSHOT.jar')
+	compile project(':cmmn-xml-core')
+
+	compile 'org.slf4j:slf4j-api:1.7.13'
+	compile 'org.slf4j:slf4j-log4j12:1.7.13'
+	
+    compile group: 'org.apache.commons',             name: 'commons-lang3',        version: '3.4'
+    compile group: 'commons-lang',                   name: 'commons-lang',         version: "2.4"
+    compile group: 'commons-io',                     name: 'commons-io',           version: '2.4'
+    compile group: 'com.google.guava',               name: 'guava',                version: '18.0'
+//    compile group: 'org.json',                       name: 'json',                 version: "20160607.3.0"
+    compile group: 'com.fasterxml.jackson.core',     name: 'jackson-core',         version: "2.1.1"
+    compile group: 'com.fasterxml.jackson.core',     name: 'jackson-annotations',  version: "2.1.1"
+    compile group: 'com.fasterxml.jackson.core',     name: 'jackson-databind',     version: "2.1.1"
+    compile group: 'com.fasterxml.jackson.datatype', name: 'jackson-datatype-json-org',     version: "2.1.1"
+	
+    
+    
+    testCompile 'org.easytesting:fest-assert:1.4'
+    testCompile 'org.testng:testng:6.9.4'
+    testCompile 'org.assertj:assertj-core:3.5.2'
+}
